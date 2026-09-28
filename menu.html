@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            const toggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            toggle.addEventListener('click', () =>{
+                navLinks.classList.toggle('open');
+        });
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 18px 48px;
+            font-family: 'poppins', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* Hmburger - hidden on desktop */
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .menu-toggle span{
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: #f3e9d8;
+            border-radius: 2px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+        ul a{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        button{
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 11px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        button:hover {
+            opacity: 0.85;
+        }
+        ul a:hover,
+        ul a.active{
+            color: #d8a94e;
+        }
+        ul a:hover::after,
+        ul a.active::after{
+            transform: scaleX(1);
+        }
+        @media (max-width: 800px) {
+            .navbar{padding: 16px 20px;}
+            ul{position: absolute;top: 100%;left: 0%;right: 0%;flex-direction: column;align-items: flex-start;gap: 0;background: #171310;max-height: 0;overflow: hidden;transition: max-height 0.4s ease;}
+            ul.open{max-height: 300px;}
+            ul li{width: 100%;padding: 14px 20px;border-top: 1px solid rgba(255,255,255.0.08);}
+            ul a::after { display: none;}
+            button{display: none;}
+            .menu-toggle{display: flex;}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="fursd.png" alt="">
+        </div>
+         <ul style="color: white; display: flex;" id="navLinks" class="navLinks">
+            <li><a href="">HOME</a></li>
+            <li><a href="">MENU</a></li>
+            <li><a href="">ABOOUT</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+        <button>Reserve Table</button> 
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <section class="menu-hero">
+        <h1>OUR MENU</h1>
+        <p>Fresh flowers, carefully prepared dishes</p>
+    </section>
+    <section class="menu-filters">
+        <button class="filter-btn active">ALL</button>
+        <button class="filter-btn">BREAKFAST</button>
+        <button class="filter-btn">MAIN COURSE</button>
+        <button class="filter-btn">DESSERT</button>
+        <button class="filter-btn">DRINKS</button>
+    </section>
+    <section class="dish-grid-section">
+        <h1>All Dishes</h1>
+        <div class="dish-grid">
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="grilled chicken.jpg" alt="">
+                <div class="dish-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh grilled salmon with garlic, btter and herbs</p>
+                </div>
+                <div class="dish-footer">
+                    <span class="price">$25</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="chef-rec">
+        <div class="text">
+            <span class="kicker">Chef Reccomendation</span>
+            <h2>Signature Steak</h2>
+            <p>Premium steak grilled to perfection,served with garlic vegetable, butter, and mashed potatoes</p>
+            <div class="pricerow">
+                <span class="price">$35</span>
+                <button class="orderbtn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="steak.jpg" alt="Signature Steak">
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="leaf">🍀</span>
+                    <div class="logo-text">LUNA <span>BISTRO</span></div>
+                </div>
+                <p>Good food,Goo mood,Great Memories</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="homepage.html"></a>
+                <a href="about.html"></a>
+                <a href="menu.html"></a>
+            </div>
+            <div class="footer-col">
+                <h4>Opening hours</h4>
+                <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
+                <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <a href="">🐦‍⬛</a>
+                <a href="">📸</a>
+                <a href="">📘</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+                2025 Luna Bristo, All Rights Reserved.
+        </div>
+    </footer>
+</body>M
+</html>

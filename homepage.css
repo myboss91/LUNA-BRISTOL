@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#hero{
+    height: 400px;
+    background-image: url(pasta\ alfredo.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 5% 10%;
+}
+
+#hero p{
+    margin-bottom: 10px;
+}
+
+#hero h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 900;
+}
+#hero button:first-of-type{
+    background-color: orange;
+    color: black;
+    border: none;
+}
+#hero button{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#hero button:last-of-type{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+#about img{
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+}
+#about{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+#about div{
+    width: 47%;
+}
+#about div p:first-of-type{
+    color: orange;
+}
+#about div:last-of-type{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#about button{
+    padding: 10px 15px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+}
+#choose{
+    background-color: rgb(25, 10, 10);
+    color: white;
+    padding: 5%;
+}
+#choose>div{
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+#choose span{
+    font-size: 70px;
+    color: orange;
+}
+#choose>div div:first-of-type{
+    border-right: 2px solid orange;
+    padding-right: 20px;
+}
+#choose>div div:last-of-type{
+    border-left: 2px solid orange;
+    padding-left: 10px;
+}
+#choose p{
+    margin-top: 10px;
+}
+@media(max-width:500px){
+    #about{
+        flex-direction: column;
+    }
+    #about div{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #dishes .cards-container{
+        flex-direction: column;
+    }
+    .card{
+        margin-bottom: 10px;
+    }
+    .card img{
+        max-width: 100%;
+        max-height: 60%;
+    }
+    #choose>div{
+        display: flex;
+        flex-direction: column;
+    }
+    #choose>div div:first-of-type{
+        border-right: none;
+        border-bottom: 2px orange solid;
+        padding-bottom: 10px;
+    }
+    #choose>div div:last-of-type{
+        border-left: none;
+        border-top: 2px solid orange;
+        padding-top: 10px;
+    }
+    #choose .mini-card{
+        text-align: center;
+    }
+}

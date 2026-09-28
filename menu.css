@@ -1,0 +1,329 @@
+.menu-hero{
+    position: relative;
+    height: 300px;
+    background-image: url(ingredients.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+}
+.menu-hero h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+.menu-hero p{
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+@media (max-widh: 600px) {
+    .menu-hero{height: 230px;}
+    .menu-hero{font-size: 30px;}
+}
+.menu-filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 40px 24px 30px;
+}
+.filter-btn{
+    background: transparent;
+    border: 1px solid hwb(39 68% 15%);
+    color: #484238;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.filter-btn:hover {
+    color: #D8A94E;
+    border-color: orange;
+}
+.filter-btn.active{
+    background: orange;
+    border-color: #D8A94E;
+    color: #171310;
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .menu-filters{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 28px 20px;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .menu-filters::-webkit-scrollbar{
+        display: none;
+    }
+    .filter-btn{
+        padding: 9px 18px;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+}
+.dish-grid-section{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 24px 60px;
+}
+.dish-grid-section h1{
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: hwb(0 0% 100%);
+    margin-bottom: 36px;
+}
+.dish-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 26px;
+}
+.dish-card{
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+    transition: trasform 0.25s ease, box-shadow 0.2s ease;
+}
+.dish-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 26px;
+}
+.dish-card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+.dish-info{
+    padding: 16px 18px 18px;
+}
+.dish-info h3{
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    margin-bottom: 6px;
+}
+.dish-info p{
+    font-size: 13px;
+    color: black;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+.dish-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price{
+    font-size: 15px;
+    color: black;
+}
+.add-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: orange;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.add-btn:hover{
+    opacity: 0.8;
+}
+/*Responsive*/
+@media(max-width:900px){
+    .dish-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:550px){
+    .dish-grid{
+        grid-template-columns: 1fr;
+    }
+    .dish-grid-section h2{
+        font-size: 24px;
+    }
+}
+.chef-rec{
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+.chef-rec .text{
+    flex: 1;
+}
+.chef-rec h2{
+    font-weight: 600;
+    font-size: 32px;
+    color: black;
+    margin-bottom: 16px;
+}
+.chef-rec .kicker{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.chef-rec p{
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 26px;
+    max-width: 420px;
+}
+.pricerow{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.pricerow .price{
+    font-weight: 700;
+    font-size: 26px;
+    color: #000;
+}
+.orderbtn{
+    background: orange;
+    color: #000;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.orderbtn:hover{
+    opacity: 0.8;
+}
+.chef-rec .image{
+    flex: 1;
+}
+.chef-rec .image img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px;
+}
+@media (max-width:800px) {
+    .chef-rec{
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 48px 20px 60px;
+        text-align: center;
+    }
+    .chef-rec p{
+        max-width: 100%;
+    }
+    .pricerow{
+        justify-content: center;
+    }
+}
+
+.site-footer{
+     background: black;
+     color: #EDE6DA;
+     padding: 50px 8px 0;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+.footer-brand{
+    flex: 1.4;
+    min-width: 200px;
+}
+.footer-brand .leaf{
+    color: orange;
+    font-size: 20px;
+}
+.footer-brand .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.footer-brand .logo-text{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.footer-brand .logo-text span{
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: orange;
+}
+.footer-brand p{
+    font-size: 13px;
+    color: white;
+    line-height: 1.5;
+}
+.footer-col{
+    flex: 1;
+    min-width: 140px;
+}
+.footer-col h4{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
+}
+.footer-col a,
+.footer-col p{
+    display: block;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.footer-col a:hover{
+    color: orange;
+}
+.socials a{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.footer-bottom{
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid white;
+    padding: 20px 0;
+}
+@media (max-width:700px) {
+    .site-footer{
+        padding: 40px 24px 0;
+    }
+    .footer-top{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
